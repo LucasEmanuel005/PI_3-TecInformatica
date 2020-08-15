@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Casimiro Montenegro Filho nasceu em Fortaleza, Estado do Ceará, em 1904 e, para tornar-se piloto do Exército brasileiro, aos 19 anos de idade mudou-se para o Rio de Janeiro.
+
+Quando tenente, ao fazer o voo inaugural entre as cidades do Rio de Janeiro e São Paulo, acabou por criar o Correio Aéreo Nacional, em 1931. Naquela época, os pilotos eram expostos às mais diversas e rigorosas condições de clima e temperatura, sendo obrigados a realizar aterrissagens forçadas em campos improvisados e a pilotar sem instrumentação.
+
+Casimiro cruzou o país desbravando novas rotas para o Correio Aéreo Nacional, ligando o Rio de Janeiro aos mais distantes rincões do Brasil. Sua grande obra, porém, seria concluída anos mais tarde: a criação do ITA – Instituto Tecnológico de Aeronáutica.
+
+Em 1941, resultante da união da aviação do Exército e da Marinha, foi formado o Ministério da Aeronáutica, cabendo a Casimiro a Subdiretoria Técnica da Aeronáutica. Assim, em 1943, viajou aos Estados Unidos com a incumbência de trazer um lote de aviões norte-americanos, tendo estendido sua visita para conhecer o MIT – Massachusetts Institute of Technology. Casimiro retornou maravilhado com a ideia de criar um Instituto semelhante no Brasil, com o objetivo de formar engenheiros de excelência e desenvolver tecnologia aeronáutica.
+
+No Brasil da década de 1940, um país essencialmente agrícola e com uma indústria mínima, incapaz de fabricar até bicicletas, o sonho de projetar e fabricar aviões parecia excêntrico aos olhos de muitos de seus companheiros. No entanto, com a ajuda do professor e chefe do Departamento de Engenharia Aeronáutica do MIT, Richard Harbert Smith, Casimiro desenvolveu as diretrizes desta nova instituição.
+
+Assim, nos anos finais da década de 1940, Casimiro envolveu-se diretamente na construção de seu sonho, na cidade de São José dos Campos, Estado de São Paulo.
+
+Em 1945, Casimiro fez uma apresentação a um grupo de oficiais do Estado Maior da Aeronáutica, no local que seria o futuro campus do ITA. Sobre o chão e seguro por pedras, expos uma carta aerofotogramétrica e, ora apontando para o papel, ora para o vasto descampado, disse o visionário: “Aqui construiremos o túnel aerodinâmico, mais à direita o laboratório de motores, ali a área residencial: casas e apartamentos para os professores, oficiais e pessoal da administração, alojamento para os alunos. Ali à esquerda, os edifícios escolares e laboratórios. Aqui será o futuro aeroporto. Esta área está reservada para a indústria aeronáutica. Tudo isto constituirá o Centro Técnico da Aeronáutica.”
+
+Ao se despedir da reunião, depois de lançar os olhos na planície totalmente vazia, gracejou o chefe do grupo, em total descrédito a Casimiro: “Até a vista, Júlio Verne”!
+
+O futuro provou que a visão de Casimiro estava correta e seu sonho era possível. No início da década seguinte, o ITA tornou-se uma realidade. Surgiu, assim, uma escola de engenharia de alto nível no país, com instalações adequadas, professores experimentados, inicialmente trazidos do exterior e residindo no próprio campus, juntamente com os alunos. Ao redor do ITA formou-se o DCTA (Departamento de Ciência e Tecnologia Aeroespacial), um complexo de pesquisa e desenvolvimento na área aeroespacial.
+
+Na sequência, em 1969, quando o avião para linhas regionais Bandeirante havia tomado forma, foi criada no mesmo campus a empresa EMBRAER, atualmente a terceira maior fabricante mundial de aviões.
+
+
+</value>
+  </data>
+</root>

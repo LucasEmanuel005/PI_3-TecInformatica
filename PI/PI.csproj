@@ -1,0 +1,417 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{45D8B37A-ECC0-4DAC-9037-04A2F15C8554}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PI</RootNamespace>
+    <AssemblyName>PI</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.3.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.3.1\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf, Version=3.6.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Protobuf.3.6.1\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4, Version=1.1.11.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.1.1.11\lib\net46\K4os.Compression.LZ4.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4.Streams, Version=1.1.11.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.Streams.1.1.11\lib\net46\K4os.Compression.LZ4.Streams.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Hash.xxHash, Version=1.0.6.0, Culture=neutral, PublicKeyToken=32cd54395057cec3, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Hash.xxHash.1.0.6\lib\net46\K4os.Hash.xxHash.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.20.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.20\lib\net452\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Renci.SshNet, Version=2016.1.0.0, Culture=neutral, PublicKeyToken=1cee9f8bde3db106, processorArchitecture=MSIL">
+      <HintPath>..\packages\SSH.NET.2016.1.0\lib\net40\Renci.SshNet.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.3\lib\netstandard2.0\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.4.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.6.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Ubiety.Dns.Core, Version=2.2.1.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.20\lib\net452\Ubiety.Dns.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Zstandard.Net, Version=1.1.7.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.20\lib\net452\Zstandard.Net.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Aluno\Aulas_Dia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aluno\Aulas_Dia.Designer.cs">
+      <DependentUpon>Aulas_Dia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Aluno\Cadastro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aluno\Cadastro.Designer.cs">
+      <DependentUpon>Cadastro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\conexao.cs" />
+    <Compile Include="Classes\controle.cs" />
+    <Compile Include="Doar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doar.Designer.cs">
+      <DependentUpon>Doar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Aluno\Duvida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aluno\Duvida.Designer.cs">
+      <DependentUpon>Duvida.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Aluno\DuvidaComp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aluno\DuvidaComp.Designer.cs">
+      <DependentUpon>DuvidaComp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Professor\DuvidaProf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Professor\DuvidaProf.Designer.cs">
+      <DependentUpon>DuvidaProf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Equipe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Equipe.Designer.cs">
+      <DependentUpon>Equipe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Aluno\Escolha_curso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aluno\Escolha_curso.Designer.cs">
+      <DependentUpon>Escolha_curso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Esq_Senha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Esq_Senha.Designer.cs">
+      <DependentUpon>Esq_Senha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Estrut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Estrut.Designer.cs">
+      <DependentUpon>Estrut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Aluno\Exame_realizacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aluno\Exame_realizacao.Designer.cs">
+      <DependentUpon>Exame_realizacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FaleConosco.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FaleConosco.Designer.cs">
+      <DependentUpon>FaleConosco.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormProp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProp.Designer.cs">
+      <DependentUpon>FormProp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="hist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="hist.Designer.cs">
+      <DependentUpon>hist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\LoginDalCom.cs" />
+    <Compile Include="Aluno\Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aluno\Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Professor\Menu_Prof.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Professor\Menu_Prof.Designer.cs">
+      <DependentUpon>Menu_Prof.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Aluno\Livros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aluno\Livros.Designer.cs">
+      <DependentUpon>Livros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Aluno\Exames.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aluno\Exames.Designer.cs">
+      <DependentUpon>Exames.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Parcerias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parcerias.Designer.cs">
+      <DependentUpon>Parcerias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Aluno\Pdfs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aluno\Pdfs.Designer.cs">
+      <DependentUpon>Pdfs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Pessoa.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuemSomos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuemSomos.Designer.cs">
+      <DependentUpon>QuemSomos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Aluno\Sala.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aluno\Sala.Designer.cs">
+      <DependentUpon>Sala.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Aluno\Selecao_Turma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aluno\Selecao_Turma.Designer.cs">
+      <DependentUpon>Selecao_Turma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Aluno\Simulado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aluno\Simulado.Designer.cs">
+      <DependentUpon>Simulado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Validacao.cs" />
+    <Compile Include="Aluno\Videos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aluno\Videos.Designer.cs">
+      <DependentUpon>Videos.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Aluno\Aulas_Dia.resx">
+      <DependentUpon>Aulas_Dia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aluno\Cadastro.resx">
+      <DependentUpon>Cadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doar.resx">
+      <DependentUpon>Doar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aluno\Duvida.resx">
+      <DependentUpon>Duvida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aluno\DuvidaComp.resx">
+      <DependentUpon>DuvidaComp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Professor\DuvidaProf.resx">
+      <DependentUpon>DuvidaProf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Equipe.resx">
+      <DependentUpon>Equipe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aluno\Escolha_curso.resx">
+      <DependentUpon>Escolha_curso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Esq_Senha.resx">
+      <DependentUpon>Esq_Senha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Estrut.resx">
+      <DependentUpon>Estrut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aluno\Exame_realizacao.resx">
+      <DependentUpon>Exame_realizacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FaleConosco.resx">
+      <DependentUpon>FaleConosco.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProp.resx">
+      <DependentUpon>FormProp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="hist.resx">
+      <DependentUpon>hist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aluno\Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Professor\Menu_Prof.resx">
+      <DependentUpon>Menu_Prof.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aluno\Livros.resx">
+      <DependentUpon>Livros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aluno\Exames.resx">
+      <DependentUpon>Exames.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aluno\Pdfs.resx">
+      <DependentUpon>Pdfs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="QuemSomos.resx">
+      <DependentUpon>QuemSomos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aluno\Sala.resx">
+      <DependentUpon>Sala.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aluno\Selecao_Turma.resx">
+      <DependentUpon>Selecao_Turma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aluno\Simulado.resx">
+      <DependentUpon>Simulado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aluno\Videos.resx">
+      <DependentUpon>Videos.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="AxAcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ft_fund_menu.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ft_fund_menu1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ft_fund_menu_V4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ft_inicio_ori.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
